@@ -12,6 +12,8 @@ public class Interval {
 			return new LeftOpenedInterval(minimum, maximum);
 		case RIGHT_OPENED:
 			return new RightOpenedInterval(minimum, maximum);
+		case BOTH_OPENED:
+			return new BothOpenedInterval(minimum, maximum);
 		default:
 			return new Interval(minimum, maximum, opening);
 		}
