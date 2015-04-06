@@ -5,8 +5,12 @@ public class Interval {
 	private double minimum;
 	private double maximum;
 	private Opening opening;
+	
+	public static Interval create (double minimum, double maximum, Opening opening){
+		return new Interval(minimum, maximum, opening);
+	}
 
-	public Interval(double minimum, double maximum, Opening opening) {
+	private Interval(double minimum, double maximum, Opening opening) {
 		this.minimum = minimum;
 		this.maximum = maximum;
 		this.opening = opening;
