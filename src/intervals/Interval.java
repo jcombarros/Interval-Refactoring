@@ -14,8 +14,10 @@ public class Interval {
 			return new RightOpenedInterval(minimum, maximum);
 		case BOTH_OPENED:
 			return new BothOpenedInterval(minimum, maximum);
+		case UNOPENED:
+			return new UnopenedInterval(minimum, maximum);
 		default:
-			return new Interval(minimum, maximum, opening);
+			throw new IllegalArgumentException("Incorrect type code value");
 		}
 	}
 
