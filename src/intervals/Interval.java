@@ -7,7 +7,12 @@ public class Interval {
 	private Opening opening;
 	
 	public static Interval create (double minimum, double maximum, Opening opening){
-		return new Interval(minimum, maximum, opening);
+		switch (opening) {
+		case LEFT_OPENED:
+			return new LeftOpenedInterval(minimum, maximum);
+		default:
+			return new Interval(minimum, maximum, opening);
+		}
 	}
 
 	protected Interval(double minimum, double maximum, Opening opening) {
