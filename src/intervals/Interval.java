@@ -10,7 +10,7 @@ public class Interval {
 		return new Interval(minimum, maximum, opening);
 	}
 
-	private Interval(double minimum, double maximum, Opening opening) {
+	protected Interval(double minimum, double maximum, Opening opening) {
 		this.minimum = minimum;
 		this.maximum = maximum;
 		this.opening = opening;
