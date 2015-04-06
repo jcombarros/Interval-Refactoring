@@ -10,6 +10,8 @@ public class Interval {
 		switch (opening) {
 		case LEFT_OPENED:
 			return new LeftOpenedInterval(minimum, maximum);
+		case RIGHT_OPENED:
+			return new RightOpenedInterval(minimum, maximum);
 		default:
 			return new Interval(minimum, maximum, opening);
 		}
