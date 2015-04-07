@@ -35,4 +35,8 @@ public class BothOpenedInterval extends Interval {
 				return false;
 		}
 	}
+	
+	public boolean intersectsWith(Interval interval) {
+		return this.includes(interval.minimum) || this.includes(interval.maximum);
+	}
 }
