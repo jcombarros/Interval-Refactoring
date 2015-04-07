@@ -18,23 +18,7 @@ public class UnopenedInterval extends Interval {
 		boolean minimumIncluded = this.includes(interval.minimum);
 		boolean maximumIncluded = this.includes(interval.maximum);
 		
-		switch (interval.opening) {
-			case BOTH_OPENED:
-				return (minimumIncluded || minimum == interval.minimum)
-						&& (maximumIncluded || maximum == interval.maximum);
-			case LEFT_OPENED:
-				return (minimumIncluded || minimum == interval.minimum)
-						&& (maximumIncluded || maximum == interval.maximum);
-			case RIGHT_OPENED:
-				return (minimumIncluded || minimum == interval.minimum)
-						&& (maximumIncluded || maximum == interval.maximum);
-			case UNOPENED:
-				return (minimumIncluded || minimum == interval.minimum)
-						&& (maximumIncluded || maximum == interval.maximum);
-			default:
-				assert false;
-				return false;
-		}
+		return this.includesResult(interval, minimumIncluded, maximumIncluded);
 	}
 	
 	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){
