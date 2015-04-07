@@ -14,13 +14,6 @@ public class UnopenedInterval extends Interval {
 		return minimum <= value && value <= maximum;
 	}
 	
-	public boolean includes(Interval interval) {
-		boolean minimumIncluded = this.includes(interval.minimum);
-		boolean maximumIncluded = this.includes(interval.maximum);
-		
-		return this.includesResult(interval, minimumIncluded, maximumIncluded);
-	}
-	
 	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){
 		return interval.includesResult(this, minimumIncluded, maximumIncluded);
 	}

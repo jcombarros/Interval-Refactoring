@@ -41,7 +41,12 @@ public abstract class Interval {
 
 	public abstract boolean includes(double value) ;
 
-	public abstract boolean includes(Interval interval) ;
+	public boolean includes(Interval interval) {
+		boolean minimumIncluded = this.includes(interval.minimum);
+		boolean maximumIncluded = this.includes(interval.maximum);
+
+		return this.includesResult(interval, minimumIncluded, maximumIncluded);
+	}
 	
 	protected abstract boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded);
 
