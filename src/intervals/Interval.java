@@ -42,6 +42,16 @@ public abstract class Interval {
 	public abstract boolean includes(double value) ;
 
 	public abstract boolean includes(Interval interval) ;
+	
+	protected abstract boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded);
+
+	protected abstract boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
+
+	protected abstract boolean includesResult(RightOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
+	
+	protected abstract boolean includesResult(BothOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
+	
+	protected abstract boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
 
 	public abstract boolean intersectsWith(Interval interval) ;
 
