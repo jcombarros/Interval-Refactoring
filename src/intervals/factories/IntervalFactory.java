@@ -5,5 +5,5 @@ import intervals.entities.Interval;
 
 public abstract class IntervalFactory {
 
-	public abstract Interval getInterval(double minimum, double maximum, Opening opening) ;
+	public abstract Interval getInterval(int minimum, int maximum, Opening opening) ;
 }

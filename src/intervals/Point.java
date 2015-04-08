@@ -2,9 +2,9 @@ package intervals;
 
 public class Point {
 	
-	private double value;
+	private int value;
 	
-	public Point (double value){
+	public Point (int value){
 		this.value = value;
 	}
 	
@@ -12,7 +12,7 @@ public class Point {
 		return this.value;
 	}
 	
-	public void setValue(double value){
+	public void setValue(int value){
 		this.value = value;
 	}
 	

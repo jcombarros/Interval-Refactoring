@@ -4,11 +4,11 @@ import intervals.Opening;
 
 public class UnopenedInterval extends Interval {
 	
-	public static Interval create (double minimum, double maximum, Opening opening){
+	public static Interval create (int minimum, int maximum, Opening opening){
 		return new UnopenedInterval(minimum, maximum);
 	}
 
-	protected UnopenedInterval(double minimum, double maximum) {
+	protected UnopenedInterval(int minimum, int maximum) {
 		super(minimum, maximum, Opening.UNOPENED);
 	}
 

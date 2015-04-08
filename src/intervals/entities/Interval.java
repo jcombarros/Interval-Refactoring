@@ -4,15 +4,15 @@ import intervals.Opening;
  
 public abstract class Interval {
  
-	protected double minimum;
-	protected double maximum;
+	protected int minimum;
+	protected int maximum;
 	protected Opening opening;
 	
-	public static Interval create (double minimum, double maximum, Opening opening){
+	public static Interval create (int minimum, int maximum, Opening opening){
 		throw new RuntimeException("Should not be here");
 	}
 
-	protected Interval(double minimum, double maximum, Opening opening) {
+	protected Interval(int minimum, int maximum, Opening opening) {
 		this.minimum = minimum;
 		this.maximum = maximum;
 		this.opening = opening;
