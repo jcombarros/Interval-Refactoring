@@ -1,4 +1,7 @@
-package intervals;
+package intervals.factories;
+
+import intervals.Opening;
+import intervals.entities.Interval;
 
 public abstract class IntervalFactory {
 

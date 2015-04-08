@@ -1,21 +1,23 @@
-package intervals;
+package intervals.entities;
 
-public class UnopenedInterval extends Interval {
+import intervals.Opening;
+
+public class LeftOpenedInterval extends Interval {
 	
 	public static Interval create (double minimum, double maximum, Opening opening){
-		return new UnopenedInterval(minimum, maximum);
+		return new LeftOpenedInterval(minimum, maximum);
 	}
-
-	protected UnopenedInterval(double minimum, double maximum) {
-		super(minimum, maximum, Opening.UNOPENED);
+	
+	protected LeftOpenedInterval(double minimum, double maximum) {
+		super(minimum, maximum, Opening.LEFT_OPENED);
 	}
 
 	public Opening getOpening() {
-		return Opening.UNOPENED;
+		return Opening.LEFT_OPENED;
 	}
 	
 	public boolean includes(double value) {
-		return minimum <= value && value <= maximum;
+		return minimum < value && value <= maximum;
 	}
 	
 	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){
@@ -23,7 +25,7 @@ public class UnopenedInterval extends Interval {
 	}
 
 	protected boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded)
+		return (minimumIncluded || minimum == interval.minimum)
 				&& (maximumIncluded || maximum == interval.maximum);
 	}
 
@@ -33,7 +35,8 @@ public class UnopenedInterval extends Interval {
 	}
 	
 	protected boolean includesResult(BothOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded) && (maximumIncluded);
+		return (minimumIncluded || minimum == interval.minimum)
+				&& (maximumIncluded);
 	}
 	
 	protected boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
@@ -43,8 +46,7 @@ public class UnopenedInterval extends Interval {
 	
 	public boolean intersectsWith(Interval interval) {
 		if (minimum == interval.maximum) {
-			return interval.opening == Opening.LEFT_OPENED || interval.opening == Opening.UNOPENED;
-
+			return false;
 		}
 		if (maximum == interval.minimum) {
 			return interval.opening == Opening.RIGHT_OPENED || interval.opening == Opening.UNOPENED;

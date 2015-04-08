@@ -1,4 +1,6 @@
-package intervals;
+package intervals.entities;
+
+import intervals.Opening;
 
 public class BothOpenedInterval extends Interval {
 	

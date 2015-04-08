@@ -1,13 +1,13 @@
 package tests;
 
 import static org.junit.Assert.*;
-import intervals.BothOpenedIntervalFactory;
-import intervals.Interval;
-import intervals.IntervalFactory;
-import intervals.LeftOpenedIntervalFactory;
 import intervals.Opening;
-import intervals.RightOpenedIntervalFactory;
-import intervals.UnopenedIntervalFactory;
+import intervals.entities.Interval;
+import intervals.factories.BothOpenedIntervalFactory;
+import intervals.factories.IntervalFactory;
+import intervals.factories.LeftOpenedIntervalFactory;
+import intervals.factories.RightOpenedIntervalFactory;
+import intervals.factories.UnopenedIntervalFactory;
 
 import org.junit.Before;
 import org.junit.Test;

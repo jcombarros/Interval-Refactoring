@@ -1,40 +1,42 @@
-package intervals;
+package intervals.entities;
 
-public class LeftOpenedInterval extends Interval {
+import intervals.Opening;
+
+public class RightOpenedInterval extends Interval {
 	
 	public static Interval create (double minimum, double maximum, Opening opening){
-		return new LeftOpenedInterval(minimum, maximum);
+		return new RightOpenedInterval(minimum, maximum);
 	}
 	
-	protected LeftOpenedInterval(double minimum, double maximum) {
-		super(minimum, maximum, Opening.LEFT_OPENED);
+	protected RightOpenedInterval(double minimum, double maximum) {
+		super(minimum, maximum, Opening.RIGHT_OPENED);
 	}
 
 	public Opening getOpening() {
-		return Opening.LEFT_OPENED;
+		return Opening.RIGHT_OPENED;
 	}
 	
 	public boolean includes(double value) {
-		return minimum < value && value <= maximum;
+		return minimum <= value && value < maximum;
 	}
 	
 	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){
 		return interval.includesResult(this, minimumIncluded, maximumIncluded);
 	}
 
-	protected boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum == interval.minimum)
+	protected boolean includesResult(LeftOpenedInterval interval , boolean minimumIncluded, boolean maximumIncluded){
+		return (minimumIncluded)
 				&& (maximumIncluded || maximum == interval.maximum);
 	}
 
 	protected boolean includesResult(RightOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
 		return (minimumIncluded || minimum == interval.minimum)
-				&& (maximumIncluded);
+				&& (maximumIncluded || maximum == interval.maximum);
 	}
 	
 	protected boolean includesResult(BothOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum == interval.minimum)
-				&& (maximumIncluded);
+		return (minimumIncluded)
+				&& (maximumIncluded || maximum == interval.maximum);
 	}
 	
 	protected boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
@@ -44,10 +46,11 @@ public class LeftOpenedInterval extends Interval {
 	
 	public boolean intersectsWith(Interval interval) {
 		if (minimum == interval.maximum) {
-			return false;
+			return interval.opening == Opening.LEFT_OPENED || interval.opening == Opening.UNOPENED;
+
 		}
 		if (maximum == interval.minimum) {
-			return interval.opening == Opening.RIGHT_OPENED || interval.opening == Opening.UNOPENED;
+			return false;
 		}
 		return this.includes(interval.minimum) || this.includes(interval.maximum);
 	}
