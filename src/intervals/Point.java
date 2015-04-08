@@ -15,5 +15,17 @@ public class Point {
 	public void setValue(double value){
 		this.value = value;
 	}
+	
+	public boolean greaterThan(Point point){
+		return this.value > point.value;
+	}
+	
+	public boolean lessThan(Point point){
+		return this.value < point.value;
+	}
+	
+	public boolean equalTo(Point point){
+		return this.value == point.value;
+	}
 
 }
