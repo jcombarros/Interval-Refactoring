@@ -7,18 +7,7 @@ public abstract class Interval {
 	protected Opening opening;
 	
 	public static Interval create (double minimum, double maximum, Opening opening){
-		switch (opening) {
-		case LEFT_OPENED:
-			return new LeftOpenedInterval(minimum, maximum);
-		case RIGHT_OPENED:
-			return new RightOpenedInterval(minimum, maximum);
-		case BOTH_OPENED:
-			return new BothOpenedInterval(minimum, maximum);
-		case UNOPENED:
-			return new UnopenedInterval(minimum, maximum);
-		default:
-			throw new IllegalArgumentException("Incorrect type code value");
-		}
+		throw new RuntimeException("Should not be here");
 	}
 
 	protected Interval(double minimum, double maximum, Opening opening) {
