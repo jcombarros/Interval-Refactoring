@@ -1,5 +1,5 @@
 package intervals;
-
+ 
 public abstract class Interval {
  
 	protected double minimum;
