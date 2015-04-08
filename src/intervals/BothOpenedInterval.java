@@ -1,6 +1,10 @@
 package intervals;
 
 public class BothOpenedInterval extends Interval {
+	
+	public static Interval create (double minimum, double maximum, Opening opening){
+		return new BothOpenedInterval(minimum, maximum);
+	}
 
 	protected BothOpenedInterval(double minimum, double maximum) {
 		super(minimum, maximum, Opening.BOTH_OPENED);

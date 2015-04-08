@@ -1,6 +1,10 @@
 package intervals;
 
 public class UnopenedInterval extends Interval {
+	
+	public static Interval create (double minimum, double maximum, Opening opening){
+		return new UnopenedInterval(minimum, maximum);
+	}
 
 	protected UnopenedInterval(double minimum, double maximum) {
 		super(minimum, maximum, Opening.UNOPENED);
