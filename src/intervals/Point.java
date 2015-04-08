@@ -1,6 +1,6 @@
 package intervals;
 
-public class Point {
+public abstract class Point {
 	
 	private int value;
 	
@@ -16,16 +16,28 @@ public class Point {
 		this.value = value;
 	}
 	
-	public boolean greaterThan(Point point){
-		return this.value > point.value;
-	}
+	public abstract boolean greaterThan(Point point);
 	
-	public boolean lessThan(Point point){
-		return this.value < point.value;
-	}
+	public abstract boolean lessThan(Point point);
 	
-	public boolean equalTo(Point point){
-		return this.value == point.value;
-	}
+	public abstract boolean equalTo(Point point);
+	
+	public abstract boolean greaterThan(FromPoint point);
+	
+	public abstract boolean lessThan(FromPoint point);
+	
+	public abstract boolean equalTo(FromPoint point);
+	
+	public abstract boolean greaterThan(UntilPoint point);
+	
+	public abstract boolean lessThan(UntilPoint point);
+	
+	public abstract boolean equalTo(UntilPoint point);
+	
+	public abstract boolean greaterThan(ExactPoint point);
+	
+	public abstract boolean lessThan(ExactPoint point);
+	
+	public abstract boolean equalTo(ExactPoint point);
 
 }
