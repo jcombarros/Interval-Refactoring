@@ -1,8 +1,8 @@
-package intervals;
+package intervals.utils;
 
-public class ExactPoint extends Point {
+public class FromPoint extends Point {
 
-	public ExactPoint(int value) {
+	public FromPoint(int value) {
 		super(value);
 	}
 
@@ -28,13 +28,12 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean lessThan(FromPoint point) {
-		// TODO Auto-generated method stub
-		return this.getValue() <= point.getValue();
+		return this.getValue() < point.getValue();
 	}
 
 	@Override
 	public boolean equalTo(FromPoint point) {
-		return false;
+		return this.getValue() == point.getValue();
 	}
 
 	@Override
@@ -54,8 +53,7 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean greaterThan(ExactPoint point) {
-		// TODO Auto-generated method stub
-		return this.getValue() > point.getValue();
+		return this.getValue() >= point.getValue();
 	}
 
 	@Override
@@ -65,7 +63,7 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean equalTo(ExactPoint point) {
-		return this.getValue() == point.getValue();
+		return false;
 	}
 
 }
