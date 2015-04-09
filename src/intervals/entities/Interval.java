@@ -4,7 +4,7 @@ import intervals.Opening;
 import intervals.utils.Point;
  
 public abstract class Interval {
-  
+   
 	protected Point minimum;
 	protected Point maximum;
 	protected Opening opening;
