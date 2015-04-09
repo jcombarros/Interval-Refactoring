@@ -8,7 +8,7 @@ public abstract class Point {
 		this.value = value;
 	}
 	
-	public double getValue(){
+	public int getValue(){
 		return this.value;
 	}
 	
