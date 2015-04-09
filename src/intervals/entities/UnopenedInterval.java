@@ -29,11 +29,11 @@ public class UnopenedInterval extends Interval {
 
 	protected boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
 		return (minimumIncluded)
-				&& (maximumIncluded || maximum == interval.maximum);
+				&& (maximumIncluded || maximum.equalTo(interval.maximum));
 	}
 
 	protected boolean includesResult(RightOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum == interval.minimum)
+		return (minimumIncluded || minimum.equalTo(interval.minimum))
 				&& (maximumIncluded);
 	}
 	
@@ -42,8 +42,8 @@ public class UnopenedInterval extends Interval {
 	}
 	
 	protected boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum == interval.minimum)
-				&& (maximumIncluded || maximum == interval.maximum);
+		return (minimumIncluded || minimum.equalTo(interval.minimum))
+				&& (maximumIncluded || maximum.equalTo(interval.maximum));
 	}
 //	
 //	public boolean intersectsWith(Interval interval) {
