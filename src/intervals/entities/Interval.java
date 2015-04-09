@@ -3,7 +3,7 @@ package intervals.entities;
 import intervals.Opening;
  
 public abstract class Interval {
- 
+  
 	protected int minimum;
 	protected int maximum;
 	protected Opening opening;
