@@ -50,7 +50,7 @@ public abstract class Interval {
 	
 	protected abstract boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
 
-//	public abstract boolean intersectsWith(Interval interval) ;
+	public abstract boolean intersectsWith(Interval interval) ;
 
 	@Override
 	public String toString() {

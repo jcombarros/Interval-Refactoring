@@ -46,14 +46,14 @@ public class BothOpenedInterval extends Interval {
 		return (minimumIncluded || minimum.equalTo(interval.minimum))
 				&& (maximumIncluded || maximum.equalTo(interval.maximum));
 	}
-//	
-//	public boolean intersectsWith(Interval interval) {
-//		if (minimum == interval.maximum) {
-//			return false;
-//		}
-//		if (maximum == interval.minimum) {
-//			return false;
-//		}
-//		return this.includes(interval.minimum) || this.includes(interval.maximum);
-//	}
+	
+	public boolean intersectsWith(Interval interval) {
+		if (minimum.equalTo(interval.maximum)) {
+			return false;
+		}
+		if (maximum.equalTo(interval.minimum)) {
+			return false;
+		}
+		return this.includes(interval.minimum.getValue()) || this.includes(interval.maximum.getValue());
+	}
 }
