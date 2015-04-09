@@ -2,7 +2,7 @@ package intervals.entities;
 
 import intervals.Opening;
 import intervals.utils.Point;
- 
+
 public abstract class Interval {
    
 	protected Point minimum;
