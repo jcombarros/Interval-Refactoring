@@ -3,9 +3,10 @@ package intervals.factories;
 import intervals.Opening;
 import intervals.entities.Interval;
 import intervals.entities.LeftOpenedInterval;
+import intervals.utils.Point;
 
 public class LeftOpenedIntervalFactory extends IntervalFactory {
-	public Interval getInterval(int minimum, int maximum, Opening opening) {
+	public Interval getInterval(Point minimum, Point maximum, Opening opening) {
 		return LeftOpenedInterval.create(minimum, maximum, opening);
 	}
 }

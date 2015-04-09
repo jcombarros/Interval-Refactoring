@@ -1,14 +1,16 @@
 package intervals.entities;
 
 import intervals.Opening;
+import intervals.utils.ExactPoint;
+import intervals.utils.Point;
 
 public class RightOpenedInterval extends Interval {
 	
-	public static Interval create (int minimum, int maximum, Opening opening){
+	public static Interval create (Point minimum, Point maximum, Opening opening){
 		return new RightOpenedInterval(minimum, maximum);
 	}
 	
-	protected RightOpenedInterval(int minimum, int maximum) {
+	protected RightOpenedInterval(Point minimum, Point maximum) {
 		super(minimum, maximum, Opening.RIGHT_OPENED);
 	}
 
@@ -16,8 +18,9 @@ public class RightOpenedInterval extends Interval {
 		return Opening.RIGHT_OPENED;
 	}
 	
-	public boolean includes(double value) {
-		return minimum <= value && value < maximum;
+	public boolean includes(int value) {
+		Point valuePoint = new ExactPoint(value);
+		return (minimum.lessThan(valuePoint) || minimum.equalTo(valuePoint)) && maximum.greaterThan(valuePoint);
 	}
 	
 //	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){

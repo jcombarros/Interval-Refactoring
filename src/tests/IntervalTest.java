@@ -8,6 +8,9 @@ import intervals.factories.IntervalFactory;
 import intervals.factories.LeftOpenedIntervalFactory;
 import intervals.factories.RightOpenedIntervalFactory;
 import intervals.factories.UnopenedIntervalFactory;
+import intervals.utils.ExactPoint;
+import intervals.utils.FromPoint;
+import intervals.utils.UntilPoint;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,48 +32,48 @@ public class IntervalTest {
 
 	@Test
 	public void midPointTest() {
-		assertEquals(5, bothOpenedIntervalFactory.getInterval(0, 10, Opening.BOTH_OPENED).midPoint(), 0.0);
-		assertEquals(5, leftOpenedIntervalFactory.getInterval(0, 10, Opening.LEFT_OPENED).midPoint(), 0.0);
-		assertEquals(5, rightOpenedIntervalFactory.getInterval(0, 10, Opening.RIGHT_OPENED).midPoint(), 0.0);
-		assertEquals(5, unopenedIntervalFactory.getInterval(0, 10, Opening.UNOPENED).midPoint(), 0.0);
+		assertEquals(5, bothOpenedIntervalFactory.getInterval(new FromPoint(0), new UntilPoint(10), Opening.BOTH_OPENED).midPoint(), 0.0);
+		assertEquals(5, leftOpenedIntervalFactory.getInterval(new FromPoint(0), new ExactPoint(10), Opening.LEFT_OPENED).midPoint(), 0.0);
+		assertEquals(5, rightOpenedIntervalFactory.getInterval(new ExactPoint(0), new UntilPoint(10), Opening.RIGHT_OPENED).midPoint(), 0.0);
+		assertEquals(5, unopenedIntervalFactory.getInterval(new ExactPoint(0), new ExactPoint(10), Opening.UNOPENED).midPoint(), 0.0);
 
-		assertEquals(0, bothOpenedIntervalFactory.getInterval(-10, 10, Opening.BOTH_OPENED).midPoint(), 0.0);
-		assertEquals(0, leftOpenedIntervalFactory.getInterval(-10, 10, Opening.LEFT_OPENED).midPoint(), 0.0);
-		assertEquals(0, rightOpenedIntervalFactory.getInterval(-10, 10, Opening.RIGHT_OPENED).midPoint(), 0.0);
-		assertEquals(0, unopenedIntervalFactory.getInterval(-10, 10, Opening.UNOPENED).midPoint(), 0.0);
+		assertEquals(0, bothOpenedIntervalFactory.getInterval(new FromPoint(-10), new UntilPoint(10), Opening.BOTH_OPENED).midPoint(), 0.0);
+		assertEquals(0, leftOpenedIntervalFactory.getInterval(new FromPoint(-10), new ExactPoint(10), Opening.LEFT_OPENED).midPoint(), 0.0);
+		assertEquals(0, rightOpenedIntervalFactory.getInterval(new ExactPoint(-10), new UntilPoint(10), Opening.RIGHT_OPENED).midPoint(), 0.0);
+		assertEquals(0, unopenedIntervalFactory.getInterval(new ExactPoint(-10), new ExactPoint(10), Opening.UNOPENED).midPoint(), 0.0);
 		
-		assertEquals(-10, bothOpenedIntervalFactory.getInterval(-15, -5, Opening.BOTH_OPENED).midPoint(), 0.0);
-		assertEquals(-10, leftOpenedIntervalFactory.getInterval(-15, -5, Opening.LEFT_OPENED).midPoint(), 0.0);
-		assertEquals(-10, rightOpenedIntervalFactory.getInterval(-15, -5, Opening.RIGHT_OPENED).midPoint(), 0.0);
-		assertEquals(-10, unopenedIntervalFactory.getInterval(-15, -5, Opening.UNOPENED).midPoint(), 0.0);
+		assertEquals(-10, bothOpenedIntervalFactory.getInterval(new FromPoint(-15), new UntilPoint(-5), Opening.BOTH_OPENED).midPoint(), 0.0);
+		assertEquals(-10, leftOpenedIntervalFactory.getInterval(new FromPoint(-15), new ExactPoint(-5), Opening.LEFT_OPENED).midPoint(), 0.0);
+		assertEquals(-10, rightOpenedIntervalFactory.getInterval(new ExactPoint(-15), new UntilPoint(-5), Opening.RIGHT_OPENED).midPoint(), 0.0);
+		assertEquals(-10, unopenedIntervalFactory.getInterval(new ExactPoint(-15), new ExactPoint(-5), Opening.UNOPENED).midPoint(), 0.0);
 	}
 
 	@Test
 	public void includeValueTest() {
-		assertFalse(bothOpenedIntervalFactory.getInterval(0, 10, Opening.BOTH_OPENED).includes(-3));
-		assertFalse(leftOpenedIntervalFactory.getInterval(0, 10, Opening.LEFT_OPENED).includes(-3));
-		assertFalse(rightOpenedIntervalFactory.getInterval(0, 10, Opening.RIGHT_OPENED).includes(-3));
-		assertFalse(unopenedIntervalFactory.getInterval(0, 10, Opening.UNOPENED).includes(-3));
+		assertFalse(bothOpenedIntervalFactory.getInterval(new FromPoint(0), new UntilPoint(10), Opening.BOTH_OPENED).includes(-3));
+		assertFalse(leftOpenedIntervalFactory.getInterval(new FromPoint(0), new ExactPoint(10), Opening.LEFT_OPENED).includes(-3));
+		assertFalse(rightOpenedIntervalFactory.getInterval(new ExactPoint(0), new UntilPoint(10), Opening.RIGHT_OPENED).includes(-3));
+		assertFalse(unopenedIntervalFactory.getInterval(new ExactPoint(0), new ExactPoint(10), Opening.UNOPENED).includes(-3));
 
-		assertFalse(bothOpenedIntervalFactory.getInterval(0, 10, Opening.BOTH_OPENED).includes(0));
-		assertFalse(leftOpenedIntervalFactory.getInterval(0, 10, Opening.LEFT_OPENED).includes(0));
-		assertTrue(rightOpenedIntervalFactory.getInterval(0, 10, Opening.RIGHT_OPENED).includes(0));
-		assertTrue(unopenedIntervalFactory.getInterval(0, 10, Opening.UNOPENED).includes(0));
+		assertFalse(bothOpenedIntervalFactory.getInterval(new FromPoint(0), new UntilPoint(10), Opening.BOTH_OPENED).includes(0));
+		assertFalse(leftOpenedIntervalFactory.getInterval(new FromPoint(0), new ExactPoint(10), Opening.LEFT_OPENED).includes(0));
+		assertTrue(rightOpenedIntervalFactory.getInterval(new ExactPoint(0), new UntilPoint(10), Opening.RIGHT_OPENED).includes(0));
+		assertTrue(unopenedIntervalFactory.getInterval(new ExactPoint(0), new ExactPoint(10), Opening.UNOPENED).includes(0));
 
-		assertTrue(bothOpenedIntervalFactory.getInterval(0, 10, Opening.BOTH_OPENED).includes(5));
-		assertTrue(leftOpenedIntervalFactory.getInterval(0, 10, Opening.LEFT_OPENED).includes(5));
-		assertTrue(rightOpenedIntervalFactory.getInterval(0, 10, Opening.RIGHT_OPENED).includes(5));
-		assertTrue(unopenedIntervalFactory.getInterval(0, 10, Opening.UNOPENED).includes(5));
+		assertTrue(bothOpenedIntervalFactory.getInterval(new FromPoint(0), new UntilPoint(10), Opening.BOTH_OPENED).includes(5));
+		assertTrue(leftOpenedIntervalFactory.getInterval(new FromPoint(0), new ExactPoint(10), Opening.LEFT_OPENED).includes(5));
+		assertTrue(rightOpenedIntervalFactory.getInterval(new ExactPoint(0), new UntilPoint(10), Opening.RIGHT_OPENED).includes(5));
+		assertTrue(unopenedIntervalFactory.getInterval(new ExactPoint(0), new ExactPoint(10), Opening.UNOPENED).includes(5));
 
-		assertFalse(bothOpenedIntervalFactory.getInterval(0, 10, Opening.BOTH_OPENED).includes(10));
-		assertTrue(leftOpenedIntervalFactory.getInterval(0, 10, Opening.LEFT_OPENED).includes(10));
-		assertFalse(rightOpenedIntervalFactory.getInterval(0, 10, Opening.RIGHT_OPENED).includes(10));
-		assertTrue(unopenedIntervalFactory.getInterval(0, 10, Opening.UNOPENED).includes(10));
+		assertFalse(bothOpenedIntervalFactory.getInterval(new FromPoint(0), new UntilPoint(10), Opening.BOTH_OPENED).includes(10));
+		assertTrue(leftOpenedIntervalFactory.getInterval(new FromPoint(0), new ExactPoint(10), Opening.LEFT_OPENED).includes(10));
+		assertFalse(rightOpenedIntervalFactory.getInterval(new ExactPoint(0), new UntilPoint(10), Opening.RIGHT_OPENED).includes(10));
+		assertTrue(unopenedIntervalFactory.getInterval(new ExactPoint(0), new ExactPoint(10), Opening.UNOPENED).includes(10));
 
-		assertFalse(bothOpenedIntervalFactory.getInterval(0, 10, Opening.BOTH_OPENED).includes(13));
-		assertFalse(leftOpenedIntervalFactory.getInterval(0, 10, Opening.LEFT_OPENED).includes(13));
-		assertFalse(rightOpenedIntervalFactory.getInterval(0, 10, Opening.RIGHT_OPENED).includes(13));
-		assertFalse(unopenedIntervalFactory.getInterval(0, 10, Opening.UNOPENED).includes(13));
+		assertFalse(bothOpenedIntervalFactory.getInterval(new FromPoint(0), new UntilPoint(10), Opening.BOTH_OPENED).includes(13));
+		assertFalse(leftOpenedIntervalFactory.getInterval(new FromPoint(0), new ExactPoint(10), Opening.LEFT_OPENED).includes(13));
+		assertFalse(rightOpenedIntervalFactory.getInterval(new ExactPoint(0), new UntilPoint(10), Opening.RIGHT_OPENED).includes(13));
+		assertFalse(unopenedIntervalFactory.getInterval(new ExactPoint(0), new ExactPoint(10), Opening.UNOPENED).includes(13));
 
 	}
 

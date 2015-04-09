@@ -1,18 +1,19 @@
 package intervals.entities;
 
 import intervals.Opening;
+import intervals.utils.Point;
  
 public abstract class Interval {
   
-	protected int minimum;
-	protected int maximum;
+	protected Point minimum;
+	protected Point maximum;
 	protected Opening opening;
 	
-	public static Interval create (int minimum, int maximum, Opening opening){
+	public static Interval create (Point minimum, Point maximum, Opening opening){
 		throw new RuntimeException("Should not be here");
 	}
 
-	protected Interval(int minimum, int maximum, Opening opening) {
+	protected Interval(Point minimum, Point maximum, Opening opening) {
 		this.minimum = minimum;
 		this.maximum = maximum;
 		this.opening = opening;
@@ -27,10 +28,10 @@ public abstract class Interval {
 	}
 
 	public double midPoint() {
-		return (maximum + minimum) / 2;
+		return (maximum.getValue() + minimum.getValue()) / 2;
 	}
 
-	public abstract boolean includes(double value) ;
+	public abstract boolean includes(int value) ;
 
 //	public boolean includes(Interval interval) {
 //		boolean minimumIncluded = this.includes(interval.minimum);
