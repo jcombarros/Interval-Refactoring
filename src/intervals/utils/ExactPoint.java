@@ -8,12 +8,12 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean greaterThan(Point point) {
-		return point.greaterThan(this);
+		return point.lessThan(this);
 	}
 
 	@Override
 	public boolean lessThan(Point point) {
-		return point.lessThan(this);
+		return point.greaterThan(this);
 	}
 
 	@Override
