@@ -33,7 +33,7 @@ public class UntilPoint extends Point {
 
 	@Override
 	public boolean equalTo(FromPoint point) {
-		return false;
+		return this.getValue() == point.getValue();
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class UntilPoint extends Point {
 
 	@Override
 	public boolean equalTo(ExactPoint point) {
-		return false;
+		return this.getValue() == point.getValue();
 	}
 
 }

@@ -34,7 +34,7 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean equalTo(FromPoint point) {
-		return false;
+		return this.getValue() == point.getValue();
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean equalTo(UntilPoint point) {
-		return false;
+		return this.getValue() == point.getValue();
 	}
 
 	@Override
