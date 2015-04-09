@@ -217,179 +217,179 @@ public class IntervalTest {
 		assertFalse(unopenedOpenedPivot.includes(unopenedIntervalFactory.getInterval(new ExactPoint(40), new ExactPoint(45), Opening.UNOPENED)));
 
 	}
-//
-//	@Test
-//	public void hasIntersectionTest() {
-//
-//		Interval bothOpenedPivot = bothOpenedIntervalFactory.getInterval(20, 40, Opening.BOTH_OPENED);
-//		
-//		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(5, 15, Opening.BOTH_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(10, 20, Opening.BOTH_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(15, 25, Opening.BOTH_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(20, 30, Opening.BOTH_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(25, 35, Opening.BOTH_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(30, 40, Opening.BOTH_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(35, 45, Opening.BOTH_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(40, 50, Opening.BOTH_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(45, 55, Opening.BOTH_OPENED)));
-//
-//		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(5, 15, Opening.LEFT_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(10, 20, Opening.LEFT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(15, 25, Opening.LEFT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(20, 30, Opening.LEFT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(25, 35, Opening.LEFT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(30, 40, Opening.LEFT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(35, 45, Opening.LEFT_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(40, 50, Opening.LEFT_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(45, 55, Opening.LEFT_OPENED)));
-//
-//		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(5, 15, Opening.RIGHT_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(10, 20, Opening.RIGHT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(15, 25, Opening.RIGHT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(20, 30, Opening.RIGHT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(25, 35, Opening.RIGHT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(30, 40, Opening.RIGHT_OPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(35, 45, Opening.RIGHT_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(40, 50, Opening.RIGHT_OPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(45, 55, Opening.RIGHT_OPENED)));
-//
-//		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(5, 15, Opening.UNOPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(10, 20, Opening.UNOPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(15, 25, Opening.UNOPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(20, 30, Opening.UNOPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(25, 35, Opening.UNOPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(30, 40, Opening.UNOPENED)));
-//		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(35, 45, Opening.UNOPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(40, 50, Opening.UNOPENED)));
-//		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(45, 55, Opening.UNOPENED)));
-//
-//		Interval leftOpenedPivot = leftOpenedIntervalFactory.getInterval(20, 40, Opening.LEFT_OPENED);
-//		
-//		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(5, 15, Opening.BOTH_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(10, 20, Opening.BOTH_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(15, 25, Opening.BOTH_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(20, 30, Opening.BOTH_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(25, 35, Opening.BOTH_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(30, 40, Opening.BOTH_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(35, 45, Opening.BOTH_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(40, 50, Opening.BOTH_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(45, 55, Opening.BOTH_OPENED)));
-//
-//		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(5, 15, Opening.LEFT_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(10, 20, Opening.LEFT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(15, 25, Opening.LEFT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(20, 30, Opening.LEFT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(25, 35, Opening.LEFT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(30, 40, Opening.LEFT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(35, 45, Opening.LEFT_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(40, 50, Opening.LEFT_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(45, 55, Opening.LEFT_OPENED)));
-//
-//		assertFalse(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(5, 15, Opening.RIGHT_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(10, 20, Opening.RIGHT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(15, 25, Opening.RIGHT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(20, 30, Opening.RIGHT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(25, 35, Opening.RIGHT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(30, 40, Opening.RIGHT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(35, 45, Opening.RIGHT_OPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(40, 50, Opening.RIGHT_OPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(45, 55, Opening.RIGHT_OPENED)));
-//
-//		assertFalse(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(5, 15, Opening.UNOPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(10, 20, Opening.UNOPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(15, 25, Opening.UNOPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(20, 30, Opening.UNOPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(25, 35, Opening.UNOPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(30, 40, Opening.UNOPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(35, 45, Opening.UNOPENED)));
-//		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(40, 50, Opening.UNOPENED)));
-//		assertFalse(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(45, 55, Opening.UNOPENED)));
-//
-//		Interval rightOpenedPivot = rightOpenedIntervalFactory.getInterval(20, 40, Opening.RIGHT_OPENED);
-//		
-//		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(5, 15, Opening.BOTH_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(10, 20, Opening.BOTH_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(15, 25, Opening.BOTH_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(20, 30, Opening.BOTH_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(25, 35, Opening.BOTH_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(30, 40, Opening.BOTH_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(35, 45, Opening.BOTH_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(40, 50, Opening.BOTH_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(45, 55, Opening.BOTH_OPENED)));
-//
-//		assertFalse(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(5, 15, Opening.LEFT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(10, 20, Opening.LEFT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(15, 25, Opening.LEFT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(20, 30, Opening.LEFT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(25, 35, Opening.LEFT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(30, 40, Opening.LEFT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(35, 45, Opening.LEFT_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(40, 50, Opening.LEFT_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(45, 55, Opening.LEFT_OPENED)));
-//
-//		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(5, 15, Opening.RIGHT_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(10, 20, Opening.RIGHT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(15, 25, Opening.RIGHT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(20, 30, Opening.RIGHT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(25, 35, Opening.RIGHT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(30, 40, Opening.RIGHT_OPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(35, 45, Opening.RIGHT_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(40, 50, Opening.RIGHT_OPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(45, 55, Opening.RIGHT_OPENED)));
-//
-//		assertFalse(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(5, 15, Opening.UNOPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(10, 20, Opening.UNOPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(15, 25, Opening.UNOPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(20, 30, Opening.UNOPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(25, 35, Opening.UNOPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(30, 40, Opening.UNOPENED)));
-//		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(35, 45, Opening.UNOPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(40, 50, Opening.UNOPENED)));
-//		assertFalse(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(45, 55, Opening.UNOPENED)));
-//
-//		Interval unopenedPivot = unopenedIntervalFactory.getInterval(20, 40, Opening.UNOPENED);
-//		
-//		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(5, 15, Opening.BOTH_OPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(10, 20, Opening.BOTH_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(15, 25, Opening.BOTH_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(20, 30, Opening.BOTH_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(25, 35, Opening.BOTH_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(30, 40, Opening.BOTH_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(35, 45, Opening.BOTH_OPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(40, 50, Opening.BOTH_OPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(45, 55, Opening.BOTH_OPENED)));
-//
-//		assertFalse(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(5, 15, Opening.LEFT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(10, 20, Opening.LEFT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(15, 25, Opening.LEFT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(20, 30, Opening.LEFT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(25, 35, Opening.LEFT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(30, 40, Opening.LEFT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(35, 45, Opening.LEFT_OPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(40, 50, Opening.LEFT_OPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(45, 55, Opening.LEFT_OPENED)));
-//
-//		assertFalse(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(5, 15, Opening.RIGHT_OPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(10, 20, Opening.RIGHT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(15, 25, Opening.RIGHT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(20, 30, Opening.RIGHT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(25, 35, Opening.RIGHT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(30, 40, Opening.RIGHT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(35, 45, Opening.RIGHT_OPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(40, 50, Opening.RIGHT_OPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(45, 55, Opening.RIGHT_OPENED)));
-//
-//		assertFalse(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(5, 15, Opening.UNOPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(10, 20, Opening.UNOPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(15, 25, Opening.UNOPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(20, 30, Opening.UNOPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(25, 35, Opening.UNOPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(30, 40, Opening.UNOPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(35, 45, Opening.UNOPENED)));
-//		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(40, 50, Opening.UNOPENED)));
-//		assertFalse(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(45, 55, Opening.UNOPENED)));
-//
-//	}
+
+	@Test
+	public void hasIntersectionTest() {
+
+		Interval bothOpenedPivot = bothOpenedIntervalFactory.getInterval(new FromPoint(20), new UntilPoint(40), Opening.BOTH_OPENED);
+		
+		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.BOTH_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.BOTH_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.BOTH_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.BOTH_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.BOTH_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.BOTH_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.BOTH_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.BOTH_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.BOTH_OPENED)));
+
+		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.LEFT_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.LEFT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.LEFT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.LEFT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.LEFT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.LEFT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.LEFT_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.LEFT_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.LEFT_OPENED)));
+
+		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(5), new UntilPoint(15), Opening.RIGHT_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(10), new UntilPoint(20), Opening.RIGHT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(15), new UntilPoint(25), Opening.RIGHT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(20), new UntilPoint(30), Opening.RIGHT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(25), new UntilPoint(35), Opening.RIGHT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(30), new UntilPoint(40), Opening.RIGHT_OPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(35), new UntilPoint(45), Opening.RIGHT_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(40), new UntilPoint(50), Opening.RIGHT_OPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(45), new UntilPoint(55), Opening.RIGHT_OPENED)));
+
+		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(5), new ExactPoint(15), Opening.UNOPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(10), new ExactPoint(20), Opening.UNOPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(15), new ExactPoint(25), Opening.UNOPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(20), new ExactPoint(30), Opening.UNOPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(25), new ExactPoint(35), Opening.UNOPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(30), new ExactPoint(40), Opening.UNOPENED)));
+		assertTrue(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(35), new ExactPoint(45), Opening.UNOPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(40), new ExactPoint(50), Opening.UNOPENED)));
+		assertFalse(bothOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(45), new ExactPoint(55), Opening.UNOPENED)));
+
+		Interval leftOpenedPivot = leftOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(40), Opening.LEFT_OPENED);
+		
+		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.BOTH_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.BOTH_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.BOTH_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.BOTH_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.BOTH_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.BOTH_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.BOTH_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.BOTH_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.BOTH_OPENED)));
+
+		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.LEFT_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.LEFT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.LEFT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.LEFT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.LEFT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.LEFT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.LEFT_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.LEFT_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.LEFT_OPENED)));
+
+		assertFalse(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(5), new UntilPoint(15), Opening.RIGHT_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(10), new UntilPoint(20), Opening.RIGHT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(15), new UntilPoint(25), Opening.RIGHT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(20), new UntilPoint(30), Opening.RIGHT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(25), new UntilPoint(35), Opening.RIGHT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(30), new UntilPoint(40), Opening.RIGHT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(35), new UntilPoint(45), Opening.RIGHT_OPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(40), new UntilPoint(50), Opening.RIGHT_OPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(45), new UntilPoint(55), Opening.RIGHT_OPENED)));
+
+		assertFalse(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(5), new ExactPoint(15), Opening.UNOPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(10), new ExactPoint(20), Opening.UNOPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(15), new ExactPoint(25), Opening.UNOPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(20), new ExactPoint(30), Opening.UNOPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(25), new ExactPoint(35), Opening.UNOPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(30), new ExactPoint(40), Opening.UNOPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(35), new ExactPoint(45), Opening.UNOPENED)));
+		assertTrue(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(40), new ExactPoint(50), Opening.UNOPENED)));
+		assertFalse(leftOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(45), new ExactPoint(55), Opening.UNOPENED)));
+
+		Interval rightOpenedPivot = rightOpenedIntervalFactory.getInterval(new ExactPoint(20), new UntilPoint(40), Opening.RIGHT_OPENED);
+		
+		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.BOTH_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.BOTH_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.BOTH_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.BOTH_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.BOTH_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.BOTH_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.BOTH_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.BOTH_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.BOTH_OPENED)));
+
+		assertFalse(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.LEFT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.LEFT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.LEFT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.LEFT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.LEFT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.LEFT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.LEFT_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.LEFT_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.LEFT_OPENED)));
+
+		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(5), new UntilPoint(15), Opening.RIGHT_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(10), new UntilPoint(20), Opening.RIGHT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(15), new UntilPoint(25), Opening.RIGHT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(20), new UntilPoint(30), Opening.RIGHT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(25), new UntilPoint(35), Opening.RIGHT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(30), new UntilPoint(40), Opening.RIGHT_OPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(35), new UntilPoint(45), Opening.RIGHT_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(40), new UntilPoint(50), Opening.RIGHT_OPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(45), new UntilPoint(55), Opening.RIGHT_OPENED)));
+
+		assertFalse(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(5), new ExactPoint(15), Opening.UNOPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(10), new ExactPoint(20), Opening.UNOPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(15), new ExactPoint(25), Opening.UNOPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(20), new ExactPoint(30), Opening.UNOPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(25), new ExactPoint(35), Opening.UNOPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(30), new ExactPoint(40), Opening.UNOPENED)));
+		assertTrue(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(35), new ExactPoint(45), Opening.UNOPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(40), new ExactPoint(50), Opening.UNOPENED)));
+		assertFalse(rightOpenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(45), new ExactPoint(55), Opening.UNOPENED)));
+
+		Interval unopenedPivot = unopenedIntervalFactory.getInterval(new ExactPoint(20), new ExactPoint(40), Opening.UNOPENED);
+		
+		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.BOTH_OPENED)));
+		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.BOTH_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.BOTH_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.BOTH_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.BOTH_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.BOTH_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.BOTH_OPENED)));
+		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.BOTH_OPENED)));
+		assertFalse(unopenedPivot.intersectsWith(bothOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.BOTH_OPENED)));
+
+		assertFalse(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(5), new ExactPoint(15), Opening.LEFT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(10), new ExactPoint(20), Opening.LEFT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(15), new ExactPoint(25), Opening.LEFT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(20), new ExactPoint(30), Opening.LEFT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(25), new ExactPoint(35), Opening.LEFT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(30), new ExactPoint(40), Opening.LEFT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(35), new ExactPoint(45), Opening.LEFT_OPENED)));
+		assertFalse(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(40), new ExactPoint(50), Opening.LEFT_OPENED)));
+		assertFalse(unopenedPivot.intersectsWith(leftOpenedIntervalFactory.getInterval(new FromPoint(45), new ExactPoint(55), Opening.LEFT_OPENED)));
+
+		assertFalse(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(5), new UntilPoint(15), Opening.RIGHT_OPENED)));
+		assertFalse(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(10), new UntilPoint(20), Opening.RIGHT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(15), new UntilPoint(25), Opening.RIGHT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(20), new UntilPoint(30), Opening.RIGHT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(25), new UntilPoint(35), Opening.RIGHT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(30), new UntilPoint(40), Opening.RIGHT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(35), new UntilPoint(45), Opening.RIGHT_OPENED)));
+		assertTrue(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(40), new UntilPoint(50), Opening.RIGHT_OPENED)));
+		assertFalse(unopenedPivot.intersectsWith(rightOpenedIntervalFactory.getInterval(new ExactPoint(45), new UntilPoint(55), Opening.RIGHT_OPENED)));
+
+		assertFalse(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(5), new ExactPoint(15), Opening.UNOPENED)));
+		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(10), new ExactPoint(20), Opening.UNOPENED)));
+		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(15), new ExactPoint(25), Opening.UNOPENED)));
+		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(20), new ExactPoint(30), Opening.UNOPENED)));
+		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(25), new ExactPoint(35), Opening.UNOPENED)));
+		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(30), new ExactPoint(40), Opening.UNOPENED)));
+		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(35), new ExactPoint(45), Opening.UNOPENED)));
+		assertTrue(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(40), new ExactPoint(50), Opening.UNOPENED)));
+		assertFalse(unopenedPivot.intersectsWith(unopenedIntervalFactory.getInterval(new ExactPoint(45), new ExactPoint(55), Opening.UNOPENED)));
+
+	}
 
 //	@Test
 //	public void intersectionTest() {
