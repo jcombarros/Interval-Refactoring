@@ -33,23 +33,23 @@ public abstract class Interval {
 
 	public abstract boolean includes(int value) ;
 
-//	public boolean includes(Interval interval) {
-//		boolean minimumIncluded = this.includes(interval.minimum);
-//		boolean maximumIncluded = this.includes(interval.maximum);
-//
-//		return this.includesResult(interval, minimumIncluded, maximumIncluded);
-//	}
-//	
-//	protected abstract boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded);
-//
-//	protected abstract boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
-//
-//	protected abstract boolean includesResult(RightOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
-//	
-//	protected abstract boolean includesResult(BothOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
-//	
-//	protected abstract boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
-//
+	public boolean includes(Interval interval) {
+		boolean minimumIncluded = this.includes(interval.minimum.getValue());
+		boolean maximumIncluded = this.includes(interval.maximum.getValue());
+
+		return this.includesResult(interval, minimumIncluded, maximumIncluded);
+	}
+	
+	protected abstract boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded);
+
+	protected abstract boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
+
+	protected abstract boolean includesResult(RightOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
+	
+	protected abstract boolean includesResult(BothOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
+	
+	protected abstract boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
+
 //	public abstract boolean intersectsWith(Interval interval) ;
 
 	@Override
