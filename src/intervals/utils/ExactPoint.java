@@ -77,6 +77,9 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean include(FromPoint point) {
+		if(this.getType() == PointType.EXACT && point.getType() != PointType.EXACT){
+			return point.include(this);
+		}
 		if((this.getType() == PointType.MIN && point.getValue() >= this.getValue()) ||
 				(this.getType() == PointType.MAX && point.getValue() < this.getValue())){
 			return true;
@@ -86,6 +89,9 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean include(UntilPoint point) {
+		if(this.getType() == PointType.EXACT && point.getType() != PointType.EXACT){
+			return point.include(this);
+		}
 		if((this.getType() == PointType.MIN && point.getValue() > this.getValue()) ||
 				(this.getType() == PointType.MAX && point.getValue() <= this.getValue())){
 			return true;
@@ -95,6 +101,9 @@ public class ExactPoint extends Point {
 
 	@Override
 	public boolean include(ExactPoint point) {
+		if(this.getType() == PointType.EXACT && point.getType() != PointType.EXACT){
+			return point.include(this);
+		}
 		if((this.getType() == PointType.MIN && point.getValue() >= this.getValue()) ||
 				(this.getType() == PointType.MAX && point.getValue() <= this.getValue())){
 			return true;
