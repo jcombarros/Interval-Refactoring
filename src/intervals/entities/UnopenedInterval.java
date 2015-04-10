@@ -1,6 +1,7 @@
 package intervals.entities;
 
 import intervals.Opening;
+import intervals.PointType;
 import intervals.utils.ExactPoint;
 import intervals.utils.Point;
 
@@ -20,7 +21,8 @@ public class UnopenedInterval extends Interval {
 	
 	public boolean includes(int value) {
 		Point valuePoint = new ExactPoint(value);
-		return (minimum.lessThan(valuePoint) || minimum.equalTo(valuePoint)) && (maximum.greaterThan(valuePoint) || maximum.equalTo(valuePoint));
+		valuePoint.setType(PointType.EXACT);
+		return minimum.include(valuePoint) && (maximum.include(valuePoint));
 	}
 	
 	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){
