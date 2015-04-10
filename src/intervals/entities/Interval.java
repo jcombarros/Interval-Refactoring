@@ -2,6 +2,7 @@ package intervals.entities;
 
 import intervals.Opening;
 import intervals.PointType;
+import intervals.utils.ExactPoint;
 import intervals.utils.Point;
 
 public abstract class Interval {
@@ -34,7 +35,11 @@ public abstract class Interval {
 		return (maximum.getValue() + minimum.getValue()) / 2;
 	}
 
-	public abstract boolean includes(int value) ;
+	public boolean includes(int value) {
+		Point valuePoint = new ExactPoint(value);
+		valuePoint.setType(PointType.EXACT);
+		return minimum.include(valuePoint) && (maximum.include(valuePoint));
+	}
 
 	public boolean includes(Interval interval) {
 		boolean minimumIncluded = this.includes(interval.minimum.getValue());

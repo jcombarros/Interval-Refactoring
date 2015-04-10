@@ -19,12 +19,6 @@ public class LeftOpenedInterval extends Interval {
 		return Opening.LEFT_OPENED;
 	}
 	
-	public boolean includes(int value) {
-		Point valuePoint = new ExactPoint(value);
-		valuePoint.setType(PointType.EXACT);
-		return minimum.include(valuePoint) && (maximum.include(valuePoint));
-	}
-	
 	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){
 		return interval.includesResult(this, minimumIncluded, maximumIncluded);
 	}
