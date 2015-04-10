@@ -1,6 +1,7 @@
 package intervals.entities;
 
 import intervals.Opening;
+import intervals.PointType;
 import intervals.utils.Point;
 
 public abstract class Interval {
@@ -15,7 +16,9 @@ public abstract class Interval {
 
 	protected Interval(Point minimum, Point maximum, Opening opening) {
 		this.minimum = minimum;
+		this.minimum.setType(PointType.MIN);
 		this.maximum = maximum;
+		this.maximum.setType(PointType.MAX);
 		this.opening = opening;
 	}
 
