@@ -14,7 +14,7 @@ import intervals.utils.UntilPoint;
 
 import org.junit.Before;
 import org.junit.Test;
-
+ 
 public class IntervalTest {
 	 
 	private IntervalFactory leftOpenedIntervalFactory;
