@@ -65,5 +65,35 @@ public class UntilPoint extends Point {
 	public boolean equalTo(ExactPoint point) {
 		return this.getValue() == point.getValue();
 	}
+	
+	
+	@Override
+	public boolean include(Point point) {
+		return !point.include(this);
+	}
+
+	@Override
+	public boolean include(FromPoint point) {
+		if(point.getValue() < this.getValue()){
+			return true;
+		}
+		return false;	
+	}
+
+	@Override
+	public boolean include(UntilPoint point) {
+		if(point.getValue() <= this.getValue()){
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean include(ExactPoint point) {
+		if(point.getValue() < this.getValue()){
+			return true;
+		}
+		return false;
+	}
 
 }

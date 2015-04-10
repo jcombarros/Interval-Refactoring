@@ -51,5 +51,14 @@ public abstract class Point {
 	public abstract boolean lessThan(ExactPoint point);
 	
 	public abstract boolean equalTo(ExactPoint point);
+	
+	
+	public abstract boolean include(Point point);
+	
+	public abstract boolean include(FromPoint point);
+	
+	public abstract boolean include(UntilPoint point);
+	
+	public abstract boolean include(ExactPoint point);
 
 }
