@@ -13,7 +13,7 @@ import org.junit.Test;
 public class IntervalTest {
 
 	private IntervalFactory intervalFactory;
-	
+
 	@Before
 	public void before(){
 		intervalFactory = new IntervalFactory();
