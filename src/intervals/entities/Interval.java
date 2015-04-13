@@ -1,6 +1,5 @@
 package intervals.entities;
 
-import intervals.Opening;
 import intervals.PointType;
 import intervals.utils.ExactPoint;
 import intervals.utils.Point;
@@ -9,28 +8,18 @@ public abstract class Interval {
    
 	protected Point minimum;
 	protected Point maximum;
-	protected Opening opening;
 	
-	public static Interval create (Point minimum, Point maximum, Opening opening){
+	public static Interval create (Point minimum, Point maximum){
 		throw new RuntimeException("Should not be here");
 	}
 
-	protected Interval(Point minimum, Point maximum, Opening opening) {
+	protected Interval(Point minimum, Point maximum) {
 		this.minimum = minimum;
 		this.minimum.setType(PointType.MIN);
 		this.maximum = maximum;
 		this.maximum.setType(PointType.MAX);
-		this.opening = opening;
 	}
-
-	public Opening getOpening() {
-		return opening;
-	}
-
-	public void setOpening(Opening opening) {
-		this.opening = opening;
-	}
-
+	
 	public double midPoint() {
 		return (maximum.getValue() + minimum.getValue()) / 2;
 	}
