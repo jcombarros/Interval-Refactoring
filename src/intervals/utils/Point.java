@@ -55,6 +55,8 @@ public abstract class Point {
 	
 	public abstract boolean include(Point point);
 	
+	protected abstract boolean includeInversion(Point point);
+	
 	public abstract boolean include(FromPoint point);
 	
 	public abstract boolean include(UntilPoint point);
