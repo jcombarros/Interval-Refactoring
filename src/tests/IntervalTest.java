@@ -6,7 +6,6 @@ import intervals.factories.IntervalFactory;
 import intervals.utils.ExactPoint;
 import intervals.utils.FromPoint;
 import intervals.utils.UntilPoint;
-
 import org.junit.Before;
 import org.junit.Test;
  
