@@ -72,7 +72,11 @@ public class ExactPoint extends Point {
 	
 	@Override
 	public boolean include(Point point) {
-		return point.include(this);
+		boolean result = point.include(this);
+		if(this.getType().equals(point.getType()) && this.getValue() != point.getValue()){
+			return !result;
+		}
+		return result;
 	}
 
 	@Override
