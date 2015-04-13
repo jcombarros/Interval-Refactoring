@@ -7,68 +7,6 @@ public class ExactPoint extends Point {
 	public ExactPoint(int value) {
 		super(value);
 	}
-
-	@Override
-	public boolean greaterThan(Point point) {
-		return point.lessThan(this);
-	}
-
-	@Override
-	public boolean lessThan(Point point) {
-		return point.greaterThan(this);
-	}
-
-	@Override
-	public boolean equalTo(Point point) {
-		return point.equalTo(this);
-	}
-
-	@Override
-	public boolean greaterThan(FromPoint point) {
-		return this.getValue() > point.getValue();
-	}
-
-	@Override
-	public boolean lessThan(FromPoint point) {
-		// TODO Auto-generated method stub
-		return this.getValue() <= point.getValue();
-	}
-
-	@Override
-	public boolean equalTo(FromPoint point) {
-		return this.getValue() == point.getValue();
-	}
-
-	@Override
-	public boolean greaterThan(UntilPoint point) {
-		return this.getValue() >= point.getValue();
-	}
-
-	@Override
-	public boolean lessThan(UntilPoint point) {
-		return this.getValue() < point.getValue();
-	}
-
-	@Override
-	public boolean equalTo(UntilPoint point) {
-		return this.getValue() == point.getValue();
-	}
-
-	@Override
-	public boolean greaterThan(ExactPoint point) {
-		return this.getValue() > point.getValue();
-	}
-
-	@Override
-	public boolean lessThan(ExactPoint point) {
-		return this.getValue() < point.getValue();
-	}
-
-	@Override
-	public boolean equalTo(ExactPoint point) {
-		return this.getValue() == point.getValue();
-	}
-	
 	
 	@Override
 	public boolean include(Point point) {
