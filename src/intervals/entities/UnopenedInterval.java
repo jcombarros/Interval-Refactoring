@@ -17,14 +17,4 @@ public class UnopenedInterval extends Interval {
 		return Opening.UNOPENED;
 	}
 
-	public boolean intersectsWith(Interval interval) {
-		if (minimum.equalTo(interval.maximum)) {
-			return interval.opening == Opening.LEFT_OPENED || interval.opening == Opening.UNOPENED;
-
-		}
-		if (maximum.equalTo(interval.minimum)) {
-			return interval.opening == Opening.RIGHT_OPENED || interval.opening == Opening.UNOPENED;
-		}
-		return this.includes(interval.minimum.getValue()) || this.includes(interval.maximum.getValue());
-	}
 }

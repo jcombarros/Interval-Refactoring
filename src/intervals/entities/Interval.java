@@ -46,7 +46,9 @@ public abstract class Interval {
 				minimum.include(interval.maximum) && maximum.include(interval.maximum);
 	}
 
-	public abstract boolean intersectsWith(Interval interval) ;
+	public boolean intersectsWith(Interval interval){
+		return minimum.include(interval.maximum) && interval.minimum.include(maximum);
+	}
 
 	@Override
 	public String toString() {

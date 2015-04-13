@@ -17,13 +17,4 @@ public class BothOpenedInterval extends Interval {
 		return Opening.BOTH_OPENED;
 	}
 
-	public boolean intersectsWith(Interval interval) {
-		if (minimum.equalTo(interval.maximum)) {
-			return false;
-		}
-		if (maximum.equalTo(interval.minimum)) {
-			return false;
-		}
-		return this.includes(interval.minimum.getValue()) || this.includes(interval.maximum.getValue());
-	}
 }

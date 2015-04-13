@@ -17,14 +17,4 @@ public class RightOpenedInterval extends Interval {
 		return Opening.RIGHT_OPENED;
 	}
 
-	public boolean intersectsWith(Interval interval) {
-		if (minimum.equalTo(interval.maximum)) {
-			return interval.opening == Opening.LEFT_OPENED || interval.opening == Opening.UNOPENED;
-
-		}
-		if (maximum.equalTo(interval.minimum)) {
-			return false;
-		}
-		return this.includes(interval.minimum.getValue()) || this.includes(interval.maximum.getValue());
-	}
 }
