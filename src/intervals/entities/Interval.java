@@ -4,13 +4,13 @@ import intervals.PointType;
 import intervals.utils.ExactPoint;
 import intervals.utils.Point;
 
-public abstract class Interval {
+public class Interval {
    
 	protected Point minimum;
 	protected Point maximum;
 	
 	public static Interval create (Point minimum, Point maximum){
-		throw new RuntimeException("Should not be here");
+		return new Interval(minimum, maximum);
 	}
 
 	protected Interval(Point minimum, Point maximum) {

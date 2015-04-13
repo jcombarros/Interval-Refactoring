@@ -3,7 +3,9 @@ package intervals.factories;
 import intervals.entities.Interval;
 import intervals.utils.Point;
 
-public abstract class IntervalFactory {
+public class IntervalFactory {
 
-	public abstract Interval getInterval(Point minimum, Point maximum) ;
+	public Interval getInterval(Point minimum, Point maximum){
+		return Interval.create(minimum, maximum);
+	}
 }
