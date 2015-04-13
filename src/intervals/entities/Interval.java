@@ -10,6 +10,9 @@ public class Interval {
 	protected Point maximum;
 	
 	public static Interval create (Point minimum, Point maximum){
+		if(minimum.getValue() >= maximum.getValue()){
+			throw new RuntimeException("Imposible Interval");
+		}
 		return new Interval(minimum, maximum);
 	}
 
