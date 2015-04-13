@@ -42,10 +42,8 @@ public abstract class Interval {
 	}
 
 	public boolean includes(Interval interval) {
-		boolean minimumIncluded = this.includes(interval.minimum.getValue());
-		boolean maximumIncluded = this.includes(interval.maximum.getValue());
-
-		return this.includesResult(interval, minimumIncluded, maximumIncluded);
+		return minimum.include(interval.minimum) && maximum.include(interval.minimum) &&
+				minimum.include(interval.maximum) && maximum.include(interval.maximum);
 	}
 	
 	protected abstract boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded);
