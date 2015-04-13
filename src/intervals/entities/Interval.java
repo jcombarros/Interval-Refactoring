@@ -45,16 +45,6 @@ public abstract class Interval {
 		return minimum.include(interval.minimum) && maximum.include(interval.minimum) &&
 				minimum.include(interval.maximum) && maximum.include(interval.maximum);
 	}
-	
-	protected abstract boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded);
-
-	protected abstract boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
-
-	protected abstract boolean includesResult(RightOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
-	
-	protected abstract boolean includesResult(BothOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
-	
-	protected abstract boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded);
 
 	public abstract boolean intersectsWith(Interval interval) ;
 

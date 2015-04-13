@@ -1,8 +1,6 @@
 package intervals.entities;
 
 import intervals.Opening;
-import intervals.PointType;
-import intervals.utils.ExactPoint;
 import intervals.utils.Point;
 
 public class BothOpenedInterval extends Interval {
@@ -18,31 +16,7 @@ public class BothOpenedInterval extends Interval {
 	public Opening getOpening() {
 		return Opening.BOTH_OPENED;
 	}
-	
-	protected boolean includesResult(Interval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return interval.includesResult(this, minimumIncluded, maximumIncluded);
-	}
 
-	protected boolean includesResult(LeftOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum.equalTo(interval.minimum))
-				&& (maximumIncluded || maximum.equalTo(interval.maximum));
-	}
-
-	protected boolean includesResult(RightOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum.equalTo(interval.minimum))
-				&& (maximumIncluded || maximum.equalTo(interval.maximum));
-	}
-	
-	protected boolean includesResult(BothOpenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum.equalTo(interval.minimum))
-				&& (maximumIncluded || maximum.equalTo(interval.maximum));
-	}
-	
-	protected boolean includesResult(UnopenedInterval interval, boolean minimumIncluded, boolean maximumIncluded){
-		return (minimumIncluded || minimum.equalTo(interval.minimum))
-				&& (maximumIncluded || maximum.equalTo(interval.maximum));
-	}
-	
 	public boolean intersectsWith(Interval interval) {
 		if (minimum.equalTo(interval.maximum)) {
 			return false;
